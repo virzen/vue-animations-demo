@@ -5,6 +5,7 @@
     <css-animations />
     <custom-classes />
     <appear />
+    <hooks />
     <in-out />
     <between-components />
     <list />
@@ -18,6 +19,7 @@ import DifferentDurations from './components/DifferentDurations.vue'
 import CssAnimations from './components/CssAnimations.vue'
 import CustomClasses from './components/CustomClasses.vue'
 import Appear from './components/Appear.vue'
+import Hooks from './components/Hooks.vue';
 import InOut from './components/InOut.vue'
 import BetweenComponents from './components/BetweenComponents.vue'
 import List from './components/List.vue'
@@ -35,6 +37,7 @@ export default {
     BetweenComponents,
     List,
     ThreeDList,
+    Hooks,
   },
 }
 </script>
