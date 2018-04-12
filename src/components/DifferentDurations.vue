@@ -1,7 +1,7 @@
 <template>
   <div id="demo">
     <h2>Different durations for enter and leave</h2>
-    <button v-on:click="show = !show">
+    <button @click="show = !show">
       Toggle
     </button>
     <transition name="fade">
