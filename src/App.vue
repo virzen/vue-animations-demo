@@ -8,6 +8,7 @@
     <in-out />
     <between-components />
     <list />
+    <three-d-list />
   </div>
 </template>
 
@@ -21,6 +22,7 @@ import Appear from './components/Appear.vue'
 import InOut from './components/InOut.vue'
 import BetweenComponents from './components/BetweenComponents.vue'
 import List from './components/List.vue'
+import ThreeDList from './components/ThreeDList.vue'
 
 export default {
   name: 'app',
@@ -34,6 +36,7 @@ export default {
     InOut,
     BetweenComponents,
     List,
+    ThreeDList,
   },
 }
 </script>

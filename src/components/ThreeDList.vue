@@ -4,18 +4,16 @@
     <button @click="add">Add</button>
     <button @click="remove">Remove</button>
     <button @click="shuffle">Shuffle</button>
-    <ul>
-      <transition-group name="slide">
-        <li v-for="item in items" :key="item.id">
-          <img :src="item.src" />
-        </li>
-      </transition-group>
-    </ul>
+    <transition-group name="slide" tag="ul">
+      <li v-for="item in items" :key="item.id">
+        <img :src="item.src" />
+      </li>
+    </transition-group>
   </div>
 </template>
 
 <script>
-import { shuffle } from 'lodash';
+import { shuffle, max, property } from 'lodash';
 import vueLogo from '../assets/logo.png';
 import reactLogo from '../assets/react.svg';
 
@@ -24,11 +22,15 @@ export default {
   data: function () {
     return {
       items: [
-        { id: 0, src: vueLogo },
-        { id: 1, src: vueLogo },
-        { id: 2, src: vueLogo },
-        { id: 3, src: reactLogo },
-        { id: 4, src: vueLogo },
+        { id: 10, src: vueLogo },
+        { id: 11, src: vueLogo },
+        { id: 12, src: vueLogo },
+        { id: 13, src: reactLogo },
+        { id: 14, src: vueLogo },
+        { id: 15, src: vueLogo },
+        { id: 16, src: vueLogo },
+        { id: 17, src: vueLogo },
+        { id: 18, src: vueLogo },
       ]
     };
   },
@@ -38,7 +40,7 @@ export default {
     },
     add: function () {
       this.items.push({
-        id: this.items[this.items.length - 1].id + 1,
+        id: max(this.items.map(property('id'))) + 1,
         src: vueLogo,
       })
     },
@@ -59,13 +61,26 @@ export default {
     opacity: 0;
   }
 
-  /*
   .slide-move {
     transition: transform 0.5s;
   }
-  */
+
+
+  ul {
+    padding: 0;
+    display: grid;
+    width: calc(70px * 3);
+    height: calc(70px * 3);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+  }
+
+  li {
+    list-style-type: none;
+  }
 
   img {
-    height: 30px;
+    height: 70px;
   }
 </style>
