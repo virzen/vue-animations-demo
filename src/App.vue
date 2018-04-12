@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import BasicTransition from './components/BasicTransition.vue'
 import DifferentDurations from './components/DifferentDurations.vue'
 import CssAnimations from './components/CssAnimations.vue'
@@ -27,7 +26,6 @@ import ThreeDList from './components/ThreeDList.vue'
 export default {
   name: 'app',
   components: {
-    HelloWorld,
     BasicTransition,
     DifferentDurations,
     CssAnimations,
