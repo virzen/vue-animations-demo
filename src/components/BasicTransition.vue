@@ -4,9 +4,15 @@
     <button @click="show = !show">
       Toggle
     </button>
+    <button @click="showClasses = !showClasses">See the classes</button>
     <transition name="fade">
       <p v-if="show">
         <img src="../assets/logo.png" />
+      </p>
+    </transition>
+    <transition name="fade">
+      <p v-if="showClasses">
+        <img src="../assets/transition.png" />
       </p>
     </transition>
   </div>
@@ -18,6 +24,7 @@ export default {
   data: function () {
     return {
       show: true,
+      showClasses: false,
     };
   }
 }
