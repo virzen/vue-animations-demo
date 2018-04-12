@@ -2,10 +2,10 @@
   <div id="demo">
     <h2>In Out</h2>
     <button @click="show = !show">Toggle</button>
-    <!-- or add a mode -->
+    <!-- and add a mode -->
     <transition name="fade">
       <!-- remember to add keys! - past you -->
-      <!-- or bind dynamic key -->
+      <!-- and bind dynamic key -->
       <!-- <p :key="show"> -->
       <p v-if="show">
         <img src="../assets/logo.png" />
