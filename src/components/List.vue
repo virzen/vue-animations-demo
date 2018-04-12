@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { shuffle, last } from 'lodash';
+import { shuffle, max, property } from 'lodash';
 import vueLogo from '../assets/logo.png';
 import reactLogo from '../assets/react.svg';
 
@@ -38,7 +38,7 @@ export default {
     },
     add: function () {
       this.items.push({
-        id: last(this.items).id + 1,
+        id: max(this.items.map(property('id'))) + 1,
         src: vueLogo,
       })
     },
